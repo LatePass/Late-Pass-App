@@ -1,0 +1,6 @@
+framework module Pods_LatePass {
+  umbrella header "Pods-LatePass-umbrella.h"
+
+  export *
+  module * { export * }
+}
