@@ -173,7 +173,9 @@ class HomePage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, 
             
             ref.child("users").child(str.replacingOccurrences(of: ".", with: "__PERIOD__")).child("incoming").child("\(count2)").setValue(data2)
             
-            
+            toTextField.text = ""
+            reason.text = ""
+            fromTextField.text = ""
         }
     }
     
