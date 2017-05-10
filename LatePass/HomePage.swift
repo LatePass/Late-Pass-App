@@ -154,7 +154,15 @@ class HomePage: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, 
             }else{
                 hour -= 12
             }
-            let fullTime = "\(hour):\(minutes) \(timeS)"
+            var min = ""
+            
+            if minutes < 10{
+                min = "0\(minutes)"
+            }else{
+                min = String(minutes)
+            }
+            
+            let fullTime = "\(hour):\(min) \(timeS)"
             
             var str = fullData["teacherToEmail"]![fromTextField.text!.replacingOccurrences(of: ".", with: "__PERIOD__")] as! String
             

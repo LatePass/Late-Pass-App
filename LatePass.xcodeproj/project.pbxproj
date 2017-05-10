@@ -62,6 +62,7 @@
 		BF9CA0B31EAB911700576FFB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BF9CA0B51EABB0D500576FFB /* HomePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		BF9CA0B71EABF13B00576FFB /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		BF9CA0B91EAC729A00576FFB /* LatePass.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LatePass.entitlements; sourceTree = "<group>"; };
 		C8B87ADA5D0BBDAC9014F8D6 /* Pods-LatePassTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LatePassTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LatePassTests/Pods-LatePassTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CFC5F58C36983BF7684B63F7 /* Pods-LatePass.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LatePass.release.xcconfig"; path = "Pods/Target Support Files/Pods-LatePass/Pods-LatePass.release.xcconfig"; sourceTree = "<group>"; };
 		ED9CAB51827DE3780DA0F0AA /* Pods_LatePassUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LatePassUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -152,6 +153,7 @@
 				BF9CA08E1EAB853900576FFB /* LaunchScreen.storyboard */,
 				BF9CA0B31EAB911700576FFB /* GoogleService-Info.plist */,
 				BF9CA0911EAB853900576FFB /* Info.plist */,
+				BF9CA0B91EAC729A00576FFB /* LatePass.entitlements */,
 			);
 			path = LatePass;
 			sourceTree = "<group>";
@@ -252,6 +254,14 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 9XWYL3K4YT;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					BF9CA0951EAB853900576FFB = {
 						CreatedOnToolsVersion = 8.3;
@@ -597,6 +607,7 @@
 			baseConfigurationReference = 121706DE8629552FA761574D /* Pods-LatePass.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LatePass/LatePass.entitlements;
 				DEVELOPMENT_TEAM = 9XWYL3K4YT;
 				INFOPLIST_FILE = LatePass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -611,6 +622,7 @@
 			baseConfigurationReference = CFC5F58C36983BF7684B63F7 /* Pods-LatePass.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = LatePass/LatePass.entitlements;
 				DEVELOPMENT_TEAM = 9XWYL3K4YT;
 				INFOPLIST_FILE = LatePass/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

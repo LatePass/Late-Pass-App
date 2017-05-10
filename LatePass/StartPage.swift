@@ -104,6 +104,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     ref.observe(.value, with: {
                         snapshot in
                         
+                        print(snapshot)
+                        
                         
                         self.activityIndicator.isHidden = true
                         
